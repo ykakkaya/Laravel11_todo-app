@@ -13,10 +13,16 @@
                             <div class="mb-3">
                                 <label  class="form-label">TODO TITLE</label>
                                 <input type="text" class="form-control" name="title">
+                                @error('title')
+                                   <p class="text-danger">{{ $message }}</p>
+                                @enderror
                             </div>
                         <div class="mb-3">
                             <label  class="form-label">TODO AÇIKLAMASI</label>
                             <textarea class="form-control" name="description"></textarea>
+                            @error('description')
+                            <p class="text-danger">{{ $message }}</p>
+                            @enderror
                         </div>
 
 
